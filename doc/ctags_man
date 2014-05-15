@@ -1,0 +1,2 @@
+ctags -I LOG4C_API --file-scope=yes --langmap=c:+.h --languages=c,c++ --links=yes --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=+q -R /usr/local/include/ ./include/
+
