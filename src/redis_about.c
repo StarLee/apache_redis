@@ -10,12 +10,12 @@ redisContext * modred_connect(const char * hostname,int port)
 	{
 		if(rcxt)
 		{
-			//LOG_TRACE("Connection error:%s\n",rcxt->errstr);
+			LOG_TRACE("Connection error:%s\n",rcxt->errstr);
 			redisFree(rcxt);
 		}
 		else
 		{
-			//LOG_TRACE("Connection error:can't allocate redis context\n");
+			LOG_TRACE("Connection error:can't allocate redis context\n");
 		}
 	}
 	return rcxt;

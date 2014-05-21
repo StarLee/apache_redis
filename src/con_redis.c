@@ -7,7 +7,7 @@
 #include <stdlib.h>
 void getSession(const char * key,p_session_v v)
 {
-	//log_init();//初始日志
+	log_init();//初始日志
 	redisContext *rctx=modred_connect("127.0.0.1",6379);
 	if(rctx->err==0)
 	{
@@ -25,7 +25,7 @@ void getSession(const char * key,p_session_v v)
 		}
 		else
 		{
-			//LOG_TRACE("%s命令错误:%s\n",comm,reply->str);
+			LOG_TRACE("%s命令错误:%s\n",comm,reply->str);
 		}
 		modred_disconnect(rctx);
 	}
@@ -33,6 +33,6 @@ void getSession(const char * key,p_session_v v)
 	{
 		printf("redis conn error %s\n",rctx->errstr);
 	}
-	//LOG_TRACE("test");
-	//log_close();//关闭日志
+	LOG_TRACE("test");
+	log_close();//关闭日志
 }

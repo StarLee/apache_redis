@@ -28,5 +28,8 @@ int main()
 	}
 	LOG_TRACE("test");
 	log_close();//关闭日志
+	log_init();
+	LOG_TRACE("test");
+	log_close();
 	return 0;
 }
